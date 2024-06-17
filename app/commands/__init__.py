@@ -31,7 +31,7 @@ class CommandHandler:
         """Execute a command by name."""
         command = self.commands.get(name)
         if not command:
-            logging.error(f"Command '{name}' not found.")
+            logging.error(f"No such command: {name}.")
             return
         try:
             command.execute(*args)

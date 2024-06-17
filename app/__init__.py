@@ -79,6 +79,7 @@ class App:
             logging.info("Application interrupted and exiting gracefully.")
         finally:
             logging.info("Application shutdown.")
+            exit("Exiting...")
 
 
 class DynamicMenuCommand(Command):
