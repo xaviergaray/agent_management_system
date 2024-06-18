@@ -28,8 +28,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Create .env file
+      run: |
+        echo "OPEN_AI_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
     - name: Test with pytest --pylint
       run: |
         pytest
-      with:
-        openai_api_key: ${{ secrets.OPENAI_API_KEY }}
