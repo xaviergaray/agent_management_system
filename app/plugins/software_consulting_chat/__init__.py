@@ -25,7 +25,7 @@ class SoftwareConsultingChat(Command):
 
     def interact_with_ai(self, user_input, character_name):
         # Generate a more conversational and focused prompt
-        prompt_text = "You're a Software Consultant. Engage the user in a natural conversation about their desires to create a system or application. Use your insights to recommend the best tech stack.."
+        prompt_text = "As an experienced Software Consultant, engage with the user about their vision for a system or application. Understand their needs and recommend the optimal technology stack, explaining the benefits of your suggestions."
         prompt = ChatPromptTemplate.from_messages(self.history + [("system", prompt_text)])
         
         output_parser = StrOutputParser()
