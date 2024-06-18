@@ -31,5 +31,5 @@ jobs:
     - name: Test with pytest --pylint
       run: |
         pytest
-      env: |
+      with:
         openai_api_key: ${{ secrets.OPENAI_API_KEY }}
